@@ -38,19 +38,6 @@ class CallController
         include_once dirname(__DIR__, 2)."/resource/list.php";
     }
 
-    public static function run() {
-        $_POST['time'] = 3600;
-        $time = new ExecTime(['run']);
-        $time->start();
-        $data = PostCurl::post("http://158.247.202.184:8080/run", $_POST, null);
-        $time->end();
-        $run_time = $time->diff("run");
-
-        $decode = json_decode($data);
-        echo '<pre>';
-        echo $data.'<pre>';
-    }
-
     public static function runTime() {
         $get = $_GET;
 
