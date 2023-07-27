@@ -1,10 +1,12 @@
 <?php
-include_once './../vendor/autoload.php';
+include_once dirname(__DIR__).'/../vendor/autoload.php';
 
 use WalnutBread\Curl\PostCurl;
 use WalnutBread\Time\ExecTime;
 
-$get = $_GET;
+$get = [
+    "time" => 10
+];
 
 $time = new ExecTime(['run']);
 $time->start();
