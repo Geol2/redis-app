@@ -1,5 +1,5 @@
 <?php
-include_once dirname(__DIR__).'/../vendor/autoload.php';
+include_once './../vendor/autoload.php';
 
 use WalnutBread\Curl\PostCurl;
 use WalnutBread\Time\ExecTime;
