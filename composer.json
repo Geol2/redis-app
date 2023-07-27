@@ -18,9 +18,11 @@
         "phpunit/phpunit": "^10.2"
     },
     "require": {
-        "vlucas/phpdotenv": "^5.5",
-        "ext-redis": "*",
         "walnutbread/framework": "*",
-        "ext-json": "*"
+        "vlucas/phpdotenv": "^5.5",
+        "guzzlehttp/guzzle": "^7.0",
+        "ext-redis": "*",
+        "ext-json": "*",
+        "ext-curl": "*"
     }
 }
