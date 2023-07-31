@@ -44,6 +44,7 @@ class CallController
         $time = new ExecTime(['run']);
         $time->start();
         $data = PostCurl::post("https://redisweb.xdev.kr/run/time", $get, null);
+        // $data = PostCurl::post("http://localhost:9002/run/time", $get, null);
         $time->end();
         $run_time = $time->diff("run");
 
