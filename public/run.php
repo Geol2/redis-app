@@ -8,7 +8,7 @@ use WalnutBread\Time\ExecTime;
 $time = new ExecTime(['run']);
 $time->start();
 $client = new GuzzleHttp\Client();
-$request = new Request("POST", "http://158.247.202.184:8080/run/time?time=".$_GET['time']);
+$request = new Request("POST", "https://redisweb.xdev.kr/run/time?time=".$_GET['time']);
 $promise = $client->sendAsync($request)->then(function ($response) {
     echo 'I completed!' .$response->getBody();
 });

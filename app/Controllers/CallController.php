@@ -15,7 +15,7 @@ class CallController
     public static function search() {
         $time = new ExecTime(['search_time']);
         $time->start();
-        $data = PostCurl::post("http://158.247.202.184:8080/keyword/search", $_POST, null);
+        $data = PostCurl::post("https://redisweb.xdev.kr/keyword/search", $_POST, null);
         $time->end();
         $search_time = $time->diff("search_time");
 
@@ -30,7 +30,7 @@ class CallController
     public static function list() {
         $time = new ExecTime(['list_time']);
         $time->start();
-        $data = PostCurl::post("http://158.247.202.184:8080/keyword/list", null, null);
+        $data = PostCurl::post("https://redisweb.xdev.kr/keyword/list", null, null);
         $time->end();
         $list_time = $time->diff("list_time");
 
@@ -43,7 +43,7 @@ class CallController
 
         $time = new ExecTime(['run']);
         $time->start();
-        $data = PostCurl::post("http://158.247.202.184:8080/run/time", $get, null);
+        $data = PostCurl::post("https://redisweb.xdev.kr/run/time", $get, null);
         $time->end();
         $run_time = $time->diff("run");
 
